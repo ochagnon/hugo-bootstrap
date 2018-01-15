@@ -1,0 +1,6 @@
+<figure class="figure">
+    <img src="{{ .Get "image" }}" class="figure-img img-fluid rounded" alt="{{ .Get "image_alt" }}">
+    {{ if .Inner }}
+    <figcaption class="figure-caption">{{ .Inner }}</figcaption>
+    {{ end }}
+</figure>

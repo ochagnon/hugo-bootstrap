@@ -1,0 +1,31 @@
+<h5>Stay Connected</h5>
+<ul>
+{{ with .Site.Params.social.email }}
+    <li>
+        <a href="mailto:{{ . }}">
+            <i class="far fa-envelope fa-2x"></i>
+        </a>
+    </li>
+{{ end }}
+{{ with .Site.Params.social.facebook }}
+    <li>
+        <a href="{{ . }}">
+            <i class="fab fa-facebook-f fa-2x"></i>
+        </a>
+    </li>
+{{ end }}
+{{ with .Site.Params.social.twitter }}
+    <li>
+        <a href="{{ . }}">
+            <i class="fab fa-twitter fa-2x"></i>
+        </a>
+    </li>
+{{ end }}
+{{ with .Site.Params.social.linkedin }}
+    <li>
+        <a href="{{ . }}">
+            <i class="fab fa-linkedin-in fa-2x"></i>
+        </a>
+    </li>
+{{ end }}
+</ul>

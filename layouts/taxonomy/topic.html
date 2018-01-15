@@ -1,8 +1,8 @@
 {{ partial "head" . }}
 <section id="main-content" class="container main_content">
-  <header class="container">
-    {{ partial "content/h1-title" . }}
-  </header>
+    <header class="container">
+        {{ partial "content/h1-title" . }}
+    </header>
   {{ range $index, $page := .Paginator.Pages }}
     {{ .Render "summary" }}
   {{ end }}

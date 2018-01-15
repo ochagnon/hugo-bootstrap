@@ -5,14 +5,32 @@
   <title>{{ .Title }} {{ if ne .Title .Site.Title }} &middot; {{ .Site.Title }}{{ end }}</title>
   {{ partial "base/metas" . }}
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha256-QUyqZrt5vIjBumoqQV0jM8CgGqscFfdGhN+nVCqX0vc=" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-
+  <link rel="stylesheet" href="{{ "assets/twitter-bootstrap/4.0.0/css/bootstrap.min.css" | relURL }}" crossorigin="anonymous" />
+  <link rel="stylesheet" href="{{ "assets/fontawesome/5.0.6/css/fontawesome-all.min.css" | relURL }}" crossorigin="anonymous" />
 
   <link rel="stylesheet" href="{{ "assets/css/style.css" | relURL }}">
-  <link rel="stylesheet" href="{{ "assets/css/tomorrow-night.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 
-  {{ partial "base/favicon" . }}
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ "images/apple-touch-icon/57x57.png" | relURL }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ "images/apple-touch-icon/114x114.png" | relURL }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ "images/apple-touch-icon/72x72.png" | relURL }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "images/apple-touch-icon/144x144.png" | relURL }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{ "images/apple-touch-icon/60x60.png" | relURL }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ "images/apple-touch-icon/120x120.png" | relURL }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ "images/apple-touch-icon/76x76.png" | relURL }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ "mages/apple-touch-icon/152x152.png" | relURL }}" />
+  <link rel="icon" type="image/png" href="{{ "favicon/196x196.png" | relURL }}" sizes="196x196" />
+  <link rel="icon" type="image/png" href="{{ "favicon/96x96.png" | relURL }}" sizes="96x96" />
+  <link rel="icon" type="image/png" href="{{ "images/favicon/32x32.png" | relURL }}" sizes="32x32" />
+  <link rel="icon" type="image/png" href="{{ "images/favicon/16x16.png" | relURL }}" sizes="16x16" />
+  <link rel="icon" type="image/png" href="{{ "images/favicon/128.png" | relURL }}" sizes="128x128" />
+  <meta name="application-name" content="{{ .Title }}"/>
+  <meta name="msapplication-TileColor" content="{{ if isset .Site.Params "msApplicationTileColor" }}{{ .Site.Params.msApplicationTileColor }}{{ else }}#FFFFFF{{ end }}" />
+  <meta name="msapplication-TileImage" content="{{ "images/mstile/144x144.png" | relURL }}" />
+  <meta name="msapplication-square70x70logo" content="{{ "images/mstile/70x70.png" | relURL }}" />
+  <meta name="msapplication-square150x150logo" content="{{ "images/mstile/150x150.png" | relURL }}" />
+  <meta name="msapplication-wide310x150logo" content="{{ "images/mstile/310x150.png" | relURL }}" />
+  <meta name="msapplication-square310x310logo" content="{{ "images/mstile/310x310.png" | relURL }}" />
 </head>
-<body class="bg-light">
+<body class="{{ .Slug }}">
   {{ partial "base/header" . }}

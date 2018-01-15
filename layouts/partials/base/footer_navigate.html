@@ -1,0 +1,14 @@
+<h5>Navigate</h5>
+{{ if .Site.Menus.main }}
+            <ul class="text-xs-center">
+    {{ $mainMenuLen := len .Site.Menus.main}}
+        {{ if gt $mainMenuLen 0 }} {{ range $k, $v := .Site.Menus.main }}
+                <li class="pl-1 pr-1 pb-2">
+                    <a href="{{.URL}}" class="">
+                        {{ .Name }}
+                    </a>
+                </li>
+        {{ end }} 
+    {{ end }}
+            </ul>
+{{ end }}

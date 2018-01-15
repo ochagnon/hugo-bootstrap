@@ -1,9 +1,9 @@
 <p>
-  {{ if .IsPage }}
+{{ if .IsPage }}
     {{ if .Description }}
-      {{ .Description | markdownify }}
+        {{ .Description | markdownify }}
     {{ else }}
-      {{ .Summary }}
+        {{ .Summary }}
     {{ end }}
-  {{ end }}
+{{ end }}
 </p>

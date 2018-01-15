@@ -1,0 +1,3 @@
+<div class="col-md-{{ .Get "width" }}">
+{{ if isset .Params "class" }}<div class="{{ .Get "class" }}">{{ .Inner }}</div>{{ else }}{{ .Inner }}{{ end }}
+</div>

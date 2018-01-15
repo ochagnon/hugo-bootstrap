@@ -1,0 +1,14 @@
+<div class="col-md-12 text-center legal">
+    {{ if .Site.Menus.footer }}
+        <ul>
+            {{ $footerMenuLen := len .Site.Menus.footer}} {{ if gt $footerMenuLen 0 }} {{ range $k, $v := .Site.Menus.footer }}
+            <li class="pl-1 pr-1 pb-2">
+                <a href="{{.URL}}" class="">
+                    {{ .Name }}
+                </a>
+            </li>
+            {{ end }} 
+        {{ end }}
+        </ul>
+    {{ end }}
+</div>

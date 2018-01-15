@@ -1,15 +1,9 @@
-hugo-bootstrap
-==============
+An other Bootstrap 4 theme
+==========================
+
 A theme with bootstrap 4, font-awesome, highlightjs
 
-*NOTE: This theme is copied inspired [Icarus] https://github.com/digitalcraftsman/hugo-icarus-theme
-Feel free to make changes and open pull requests.*
-
-You can find a live site using this theme [here](http://mmrath.com/).
-
-## Screenshot
-
-![preview](https://github.com/mmrath/hugo-bootstrap/blob/master/images/screenshot.png)
+*NOTE: This theme is a fork of https://github.com/mmrath/hugo-bootstrap*
 
 ## Installation
 
@@ -17,7 +11,7 @@ You can find a live site using this theme [here](http://mmrath.com/).
 $ cd your_site_repo/
 $ mkdir themes
 $ cd themes
-$ git clone https://github.com/mmrath/hugo-bootstrap
+$ git clone -o bootstrap4 https://github.com/ochagnon/hugo-bootstrap
 ```
 
 See the [official Hugo themes documentation](http://gohugo.io/themes/installing) for more info.
@@ -34,10 +28,9 @@ This theme expects a relatively standard Hugo blog/personal site layout:
     ├── page
     |   ├── about-me.md
     |   ├── license.md
+    ├── _index.md
     └── other_page.md
 ```
-
-Just run `hugo --theme=hugo-bootstrap` to generate your site!
 
 ## Configuration
 
@@ -47,11 +40,31 @@ Please see the config file of the example site in this repo for details of confg
 
 An example of what your site's `config.toml` could look like. All theme-specific parameters are under `[params]` and standard Hugo parameters are used where possible.
 
+## Required assets
 
-## Questions, ideas, bugs, pull requests?
+If you don't need custom CSS or JS, create empty files.
 
-All feedback is welcome! Head over to the [issue tracker](https://github.com/mmrath/hugo-bootstrap/issues).
+- `static/css/style.css`
+- `static/js/script.js`
 
-## License
+The following need to have real content.
 
-Open sourced under the [MIT license](https://github.com/enten/hyde-y/blob/master/LICENSE).
+- `static/images/logo.png`
+- `static/images/apple-touch-icon/57x57.png`
+- `static/images/apple-touch-icon/114x114.png`
+- `static/images/apple-touch-icon/72x72.png`
+- `static/images/apple-touch-icon/144x144.png`
+- `static/images/apple-touch-icon/60x60.png`
+- `static/images/apple-touch-icon/120x120.png`
+- `static/images/apple-touch-icon/76x76.png`
+- `static/images/apple-touch-icon/152x152.png`
+- `static/images/favicon/196x196.png`
+- `static/images/favicon/96x96.png`
+- `static/images/favicon/32x32.png`
+- `static/images/favicon/16x16.png`
+- `static/images/favicon/128.png`
+- `static/images/mstile/144x144.png`
+- `static/images/mstile/70x70.png`
+- `static/images/mstile/150x150.png`
+- `static/images/mstile/310x150.png`
+- `static/images/mstile/310x310.png`
