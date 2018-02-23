@@ -9,7 +9,7 @@
 <meta name="description" content="{{ .Site.Params.description }}" />
 {{ end }}
 <meta name="keywords" content="{{ if .Keywords }}{{ range .Keywords }}{{ . }}, {{ end }}{{else if isset .Params "tags" }}{{ range .Params.tags }}{{ . }}, {{ end }}{{end}}">
-{{ with .Site.Params.googleplus }}
+{{ with .Site.Params.social.googleplus }}
 <link rel="author" href="http://plus.google.com/+{{ . }}">
 {{ end }}
 
@@ -36,10 +36,10 @@
     {{ end }}
   {{ end }}
 
-  {{ if ne .Site.Params.twitter "" }}
+  {{ if ne .Site.Params.social.twitter "" }}
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@{{ .Site.Params.twitter }}" />
-<meta name="twitter:creator" content="@{{ .Site.Params.twitter }}" />
+<meta name="twitter:site" content="@{{ .Site.Params.social.twitter }}" />
+<meta name="twitter:creator" content="@{{ .Site.Params.social.twitter }}" />
 <meta name="twitter:title" content="{{ .Title }}" />
 <meta name="twitter:description" content="{{ .Description }}" />
 <meta name="twitter:url" content="{{ .Permalink }}" />
@@ -53,7 +53,7 @@
     "headline": "{{ .Title }}",
     "author": {
       "@type": "Person",
-      "name": "http://profiles.google.com/+{{ .Site.Params.googleplus }}?rel=author"
+      "name": "http://profiles.google.com/+{{ .Site.Params.social.googleplus }}?rel=author"
     },
     "datePublished": "{{ .Date.Format "2006-01-02" }}",
     "description": "{{ .Description }}",
