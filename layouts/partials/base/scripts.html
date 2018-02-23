@@ -11,5 +11,14 @@
 
 <script src="{{ "js/script.js" | relURL }}"></script>
 
-{{ template "_internal/google_analytics_async.html" . }}
+{{ if ne .Site.Params.googleAnalytics "" }}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleAnalytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ Get .Site.Params.googleAnalytics }}');
+</script>
 
+{{ end }}
