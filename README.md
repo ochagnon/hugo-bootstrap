@@ -42,9 +42,9 @@ An example of what your site's `config.toml` could look like. All theme-specific
 
 ## Required assets
 
-If you don't need custom CSS or JS, create empty files.
+If you don't need custom SCSS (SaSS) or JS, create empty files.
 
-- `static/css/style.css`
+- `static/scss/style.scss`
 - `static/js/script.js`
 
 The following need to have real content.
