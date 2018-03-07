@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md fixed-top site-navbar">
     <a class="navbar-brand" href="{{ .Site.BaseURL }}">
-        <img width="20%" src="/images/logo.png"  />
+        <img src="/images/logo.png"  />
         {{ .Site.Title }}
     </a>
     <button class="navbar-toggler" 
@@ -14,7 +14,7 @@
             <li class="nav-item">
                 <a class="nav-link menu-item" href="{{.URL}}">
                     {{ .Pre }}
-                    <span class="text-capitalize no-decoration">{{ .Name }}</span>
+                    <span class="no-decoration">{{ .Name }}</span>
                 </a>
             </li>
             {{end}}
