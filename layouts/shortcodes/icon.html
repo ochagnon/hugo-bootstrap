@@ -1,1 +1,1 @@
-<i class="fa{{ if isset .Params "style" }}{{ .Get "style" }}{{ else }}r{{ end }} fa-{{ .Get "name" }}{{ if isset .Params "size" }} fa-{{ .Get "size" }}x{{ end }}"></i>
+<i class="fa{{ if isset .Params "style" }}{{ .Get "style" }}{{ else }}r{{ end }} fa-{{ .Get "name" }}{{ if isset .Params "size" }} fa-{{ .Get "size" }}x{{ end }}{{ if isset .Params "class" }} {{ .Get "class" }}{{ end }}"{{ if isset .Params "background" }} style="background:#{{ .Get "background"}}"{{ end }}></i>
