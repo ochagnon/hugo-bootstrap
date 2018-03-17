@@ -1,29 +1,29 @@
 <ul>
 {{ with .Site.Params.social.email }}
-    <li>
+    <li class="mail">
         <a href="mailto:{{ . }}">
-            <i class="far fa-envelope fa-2x"></i>
+            <i class="far fa-envelope fa-2x fa-fw"></i>
         </a>
     </li>
 {{ end }}
 {{ with .Site.Params.social.facebook }}
-    <li>
+    <li class="facebook">
         <a href="{{ . }}">
-            <i class="fab fa-facebook-f fa-2x"></i>
+            <i class="fab fa-facebook-f fa-2x fa-fw"></i>
         </a>
     </li>
 {{ end }}
 {{ with .Site.Params.social.twitter }}
-    <li>
+    <li class="twitter">
         <a href="{{ . }}">
-            <i class="fab fa-twitter fa-2x"></i>
+            <i class="fab fa-twitter fa-2x fa-fw"></i>
         </a>
     </li>
 {{ end }}
 {{ with .Site.Params.social.linkedin }}
-    <li>
+    <li class="linkedin">
         <a href="{{ . }}">
-            <i class="fab fa-linkedin-in fa-2x"></i>
+            <i class="fab fa-linkedin-in fa-2x fa-fw"></i>
         </a>
     </li>
 {{ end }}
